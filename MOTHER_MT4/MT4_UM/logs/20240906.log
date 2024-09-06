@@ -1,0 +1,12 @@
+0	17:38:29.150	Extension module loaded: Tick Data Suite v2.3.11
+0	17:38:29.150	Ultima Markets MT4 build 1421 started (Ultima Markets Ltd)
+0	17:38:29.150	Windows 10 Pro x64, RDP, UAC, 16 x AMD Ryzen 9 7940HS w/ Radeon 780M Graphics , Memory: 7430 / 24357 Mb, Disk: 699 / 952 Gb, GMT+8
+0	17:38:29.150	Data Folder: C:\btman\MOTHER_MT4\MT4_UM
+2	17:38:32.461	Expert SRM_v4.6_AlgoX_REAL XAUUSD,M1: loaded successfully
+2	17:38:32.492	Expert Moving Average UST10Y_Z9,H1: loaded successfully
+0	17:38:33.630	'44801805': login on ICMarketsSC-Demo04 through DC_HK_D04 (ping: 228.60 ms)
+0	17:38:35.381	'44801805': login datacenter on ICMarketsSC-Demo04 through DC_HK_D04 (ping: 228.60 ms)
+0	17:38:35.780	'44801805': previous successful authorization performed from 123.1.212.145
+2	17:38:45.825	Expert Moving Average UST10Y_Z9,H1: removed
+2	17:39:53.637	Expert SRM_v4.6_AlgoX_REAL XAUUSD,M1: removed
+0	17:39:53.783	Ultima Markets MT4 build 1421 stopped
