@@ -1,0 +1,40 @@
+//+------------------------------------------------------------------+
+//|                   Account Information Script                     |
+//+------------------------------------------------------------------+
+#property copyright "Copyright 2023, Your Name"
+#property link      "https://www.yourwebsite.com"
+#property version   "1.00"
+#property strict
+#property show_inputs
+
+//+------------------------------------------------------------------+
+//| Script program start function                                    |
+//+------------------------------------------------------------------+
+void OnStart()
+{
+   // Get account information
+   string accountServer = AccountInfoString(ACCOUNT_SERVER);
+   datetime currentTime = TimeCurrent();
+   int accountNumber = AccountInfoInteger(ACCOUNT_LOGIN);
+   string currentMarket = Symbol();
+   double marginRequired = MarketInfo(Symbol(), MODE_MARGINREQUIRED);
+   double leverage = AccountInfoInteger(ACCOUNT_LEVERAGE);
+   double askPrice = MarketInfo(Symbol(), MODE_ASK);
+   double contractSize = MarketInfo(Symbol(), MODE_LOTSIZE);
+   
+   // Calculate askPrice * contractSize * leverage
+   double calculation = askPrice * contractSize * leverage;
+   
+   // Prepare the information string
+   string info = "Account Information:\n";
+   info += "Server: " + accountServer + "\n";
+   info += "Current Time: " + TimeToString(currentTime, TIME_DATE|TIME_SECONDS) + "\n";
+   info += "Account Number: " + IntegerToString(accountNumber) + "\n";
+   info += "Current Market: " + currentMarket + "\n";
+   info += "Margin Required: " + DoubleToString(marginRequired, 2) + "\n";
+   info += "Leverage: 1:" + DoubleToString(leverage, 0) + "\n";
+   info += "Ask Price * Contract Size * Leverage: " + DoubleToString(calculation, 2);
+   
+   // Show the information in an alert box
+   Alert(info);
+}
