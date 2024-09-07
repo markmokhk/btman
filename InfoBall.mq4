@@ -29,6 +29,19 @@ void OnStart()
     double marginRequired = MarketInfo(Symbol(), MODE_MARGINREQUIRED);
     accountInfo += "Margin Required (from Symbol): " + DoubleToString(marginRequired, 2) + "\n";
     
+    // Add step out level and margin call level
+    double stepOutLevel = AccountStopoutLevel();
+    double marginCallLevel = AccountStopoutLevel(); // Assuming margin call level is the same as stopout level
+    accountInfo += "Step Out Level: " + DoubleToString(stepOutLevel, 2) + "%\n";
+    accountInfo += "Margin Call Level: " + DoubleToString(marginCallLevel, 2) + "%\n";
+    
+    // Add current balance, current equity, and free margin
+    double currentBalance = AccountBalance();
+    double currentEquity = AccountEquity();
+    double freeMargin = AccountFreeMargin();
+    accountInfo += "Current Balance: " + DoubleToString(currentBalance, 2) + "\n";
+    accountInfo += "Current Equity: " + DoubleToString(currentEquity, 2) + "\n";
+    accountInfo += "Free Margin: " + DoubleToString(freeMargin, 2) + "\n";
+    
     MessageBox(accountInfo, "Account Information", MB_OK);
 }
-
